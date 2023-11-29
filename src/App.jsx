@@ -100,7 +100,8 @@ function App() {
         resumen: "",
       });
       console.log(res);
-      //setBooks(...books, res.data.libros);
+      location.reload();
+      //setBooks(...books, res.data.book);
     }
     console.log("das");
   };
@@ -132,7 +133,7 @@ function App() {
                   <div className="generos">
                     {book.generos &&
                       book.generos.map((genero) => {
-                        console.log("holas");
+                        // console.log(book);
                         return <h4>{genero}</h4>;
                       })}
                   </div>
@@ -158,6 +159,7 @@ function App() {
             );
           })}
         <div className="creator">
+          <h1>Crear un libro: </h1>
           <form className="creator-form" onSubmit={createBook}>
             <div className="input">
               <span> Nombre:</span>
